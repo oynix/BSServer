@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><users>
+	<user>
+		<name>Liming</name>
+		<password>Liming1</password>
+	</user>
+	
+	<user>
+		<name>Wangwu</name>
+		<password>Wangwu1</password>
+	</user>
+	
+	<user>
+		<name>Jason</name>
+		<password>Jason1</password>
+	</user>
+	
+	<user>
+		<name>admin</name>
+		<password>a</password>
+	</user>
+	<user>
+		<name>li</name>
+		<password>jfj</password>
+	</user>
+</users>
