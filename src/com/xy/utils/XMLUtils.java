@@ -185,6 +185,7 @@ public class XMLUtils {
 	 */
 	public static boolean deleteUser(String name)
 			throws ParserConfigurationException, SAXException, IOException, TransformerException {
+		boolean isDelete = false;
 		// 工厂新对象
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		// 得到builder
@@ -206,14 +207,14 @@ public class XMLUtils {
 			if (s_name.equals(name)) {
 				// 如果存在
 				user.getParentNode().removeChild(user);
-				return true;
+				isDelete = true;
 			}
 		}
 		TransformerFactory tfactory = TransformerFactory.newInstance();
 		Transformer transformer = tfactory.newTransformer();
 		transformer.transform(new DOMSource(document), new StreamResult(new FileOutputStream("BSServer/users.xml")));
 
-		return false;
+		return isDelete;
 	}
 
 	/**
@@ -247,7 +248,6 @@ public class XMLUtils {
 		TransformerFactory tfactory = TransformerFactory.newInstance();
 		Transformer transformer = tfactory.newTransformer();
 		transformer.transform(new DOMSource(document), new StreamResult(new FileOutputStream("BSServer/users.xml")));
-//		transformer.transform(new DOMSource(document), new StreamResult(new FileOutputStream("users.xml")));
 
 		return true;
 	}
